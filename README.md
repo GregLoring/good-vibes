@@ -51,6 +51,8 @@ $ git ls-files -mo | egrep -v '^target/' | egrep '.clj$' | xargs lein cljfmt che
 
 settings.json: shift+cmd+p > Preferences: Open Settings (JSON)
 
+Warning: It looks like a fair chunk of this is obsolete!
+
 ```json
   "calva.showDocstringInParameterHelp": true,
   "calva.syncReplNamespaceToCurrentFile": true,
