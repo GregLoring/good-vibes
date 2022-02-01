@@ -74,7 +74,7 @@ Warning: It looks like a fair chunk of this is obsolete!
     "calvaRebuild": [
       "saveAll",
       "calva.refresh",
-      "calva.loadNamespace"
+      "calva.loadFile"
     ]
   }
 ```
