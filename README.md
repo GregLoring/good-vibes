@@ -20,7 +20,7 @@ I also have plans to add some additional material to
 - help you write a test for a "Brave and True" exercise
 - introduce you to some fun libraries, like `plumatic/schema` and `metosin/compojure-api`
 
-Aside: [Gorilla-REPL](http://gorilla-repl.org/) is an alternative "in the notebook style."  There is no discussion of it here.
+Aside: [Gorilla-REPL](http://gorilla-repl.org/) is an alternative "in the notebook style.  You can think of it like a pretty REPL that can plot graphs and draw tables, or you can think of it as an editor for rich documents that can contain interactive Clojure code, graphs, tables, notes, LaTeX formulae." There is no discussion of it here.
 
 ## Minimal Environment Setup
 
