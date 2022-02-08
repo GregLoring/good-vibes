@@ -20,8 +20,6 @@ I also have plans to add some additional material to
 - help you write a test for a "Brave and True" exercise
 - introduce you to some fun libraries, like `plumatic/schema` and `metosin/compojure-api`
 
-Aside: [Gorilla-REPL](http://gorilla-repl.org/) is an alternative "in the notebook style.  You can think of it like a pretty REPL that can plot graphs and draw tables, or you can think of it as an editor for rich documents that can contain interactive Clojure code, graphs, tables, notes, LaTeX formulae." There is no discussion of it here.
-
 ## Minimal Environment Setup
 
 ### Use [SDKMAN!](https://sdkman.io/) for java and leiningen.
@@ -140,3 +138,11 @@ $ git ls-files -mo | egrep -v '^target/' | egrep '.clj$' | xargs lein cljfmt che
 Update .gitignore to suppress files create by linter: `.clj-kondo/.cache/*/lock`.
 
 Update .gitignore to suppress files created by Calva “Run … tests” commands: `*.transit.json`.
+
+## Alternatives
+
+Clojure environment options that didn't get chosen (obviously).
+
+emacs, vim, tmux, ...
+
+[Gorilla-REPL](http://gorilla-repl.org/) is an alternative "in the notebook style.  You can think of it like a pretty REPL that can plot graphs and draw tables, or you can think of it as an editor for rich documents that can contain interactive Clojure code, graphs, tables, notes, LaTeX formulae."
