@@ -20,6 +20,8 @@ I also have plans to add some additional material to
 - help you write a test for a "Brave and True" exercise
 - introduce you to some fun libraries, like `plumatic/schema` and `metosin/compojure-api`
 
+Aside: [Gorilla-REPL](http://gorilla-repl.org/) is an alternative "in the notebook style."  There is no discussion of it here.
+
 ## Minimal Environment Setup
 
 ### Use [SDKMAN!](https://sdkman.io/) for java and leiningen.
