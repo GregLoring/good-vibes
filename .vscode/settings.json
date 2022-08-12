@@ -1,0 +1,30 @@
+{
+  "calva.showDocstringInParameterHelp": true,
+  "calva.paredit.defaultKeyMap": "original",
+  "macros": {
+      "clj.reloadAll": [
+          "workbench.action.files.saveFiles",
+          "calva.refreshAll"
+      ],
+      "clj.reloadFile": [
+          "workbench.action.files.saveFiles",
+          "calva.loadFile"
+      ],
+      "clj.rerunAllTests": [
+          "workbench.action.files.saveFiles",
+          "calva.runAllTests"
+      ],
+      "clj.rerunCurrentTest": [
+          "workbench.action.files.saveFiles",
+          "calva.runTestUnderCursor"
+      ],
+      "clj.rerunFailingTests": [
+          "workbench.action.files.saveFiles",
+          "calva.rerunTests"
+      ],
+      "clj.rerunNamespaceTests": [
+          "workbench.action.files.saveFiles",
+          "calva.runNamespaceTests"
+      ]
+  }
+}
