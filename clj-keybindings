@@ -1,0 +1,42 @@
+// add these keybinding to your user keybindings.json
+[
+  { 
+      "key": "ctrl+alt+c ctrl+alt+k", // kill repl
+      "command": "calva.disconnect" 
+  }, 
+  { 
+      "key": "ctrl+alt+c ctrl+alt+b", // rebuild
+      "command": "macros.clj.reloadAll",
+      "when": "calva:connected && calva:keybindingsEnabled && editorLangId == 'clojure'"
+  },
+  { 
+      "key": "ctrl+alt+c ctrl+alt+enter", 
+      "command": "macros.clj.reloadFile",
+      "when": "calva:connected && calva:keybindingsEnabled && editorLangId == 'clojure'"
+  },
+  { 
+      "key": "ctrl+alt+c shift+t",
+      "command": "macros.clj.rerunAllTests",
+      "when": "calva:connected && calva:keybindingsEnabled && editorLangId == 'clojure'"
+  },
+  { 
+      "key": "ctrl+alt+c ctrl+alt+t",
+      "command": "macros.clj.rerunCurrentTest",
+      "when": "calva:connected && calva:keybindingsEnabled && editorLangId == 'clojure'"
+  },
+  { 
+      "key": "ctrl+alt+c ctrl+t",
+      "command": "macros.clj.rerunFailingTests",
+      "when": "calva:connected && calva:keybindingsEnabled && editorLangId == 'clojure'"
+  },
+  { 
+      "key": "ctrl+alt+c t",
+      "command": "macros.clj.rerunNamespaceTests",
+      "when": "calva:connected && calva:keybindingsEnabled && editorLangId == 'clojure'"
+  },
+  {
+      "key": "ctrl+alt+delete",
+      "command": "paredit.killSexpForward",
+      "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+  }
+]

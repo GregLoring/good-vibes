@@ -58,50 +58,18 @@ They are by far the most helpful Paredit commands.
 
 ### Some helpful settings and macros (The Secret Sauce)
 
-Add the following to `settings.json` via `ctrl+shift+p` > **Preferences: Open Settings (JSON)**
+Calva specific workspace settings are in `.vscode/settings.json`.  Also consider `calva.replConnectSequences`.
 
-Warning: It looks like some of this is obsolete.
+`calvaRebuild` SHOULD do everything necessary to update all of the namespaces in the REPL,
+but I'm not sure it actually does. You may need to do this twice because file order is not deterministic
+and if you change a function name or something, dependent files may fail the first time.
 
-```json
-  "calva.showDocstringInParameterHelp": true,
-  "calva.syncReplNamespaceToCurrentFile": true,
-  "calva.paredit.defaultKeyMap": "original",
-  "calva.fmt.alignMapItems": true,
-  "calva.replConnectSequences": [
-    {
-      "name": "Leiningen clj-only (oscar)",
-      "projectType": "Leiningen",
-      "cljsType": "none",
-      "menuSelections": {
-         "leinAlias": null,
-         "leinProfiles": [":dev", ":oscar"]
-       }
-     }
-  ],
+Add the keyboard shortcut bindings from `clj-keybindings` to `keybindings.json`
+via `ctrl+shift+p` > **Preferences: Open Keyboard Shortcuts (JSON)**
 
-  "macros": {
-    "calvaRebuild": [
-      "saveAll",
-      "calva.refresh",
-      "calva.loadFile"
-    ]
-  }
-```
-
-`calvaRebuild` does everything necessary to update the REPL. You may need to do this twice because file order is not deterministic and if you change a function name or something, dependent files may fail the first time.
-
-Add the following to `keybindings.json` via `ctrl+shift+p` > **Preferences: Open Keyboard Shortcuts (JSON)**
-
-```json
-  {
-    "key": "ctrl+alt+c ctrl+alt+k",
-    "command": "calva.disconnect"
-  },
-  {
-    "key": "ctrl+alt+c ctrl+alt+r",
-    "command": "macros.calvaRebuild"
-  }
-```
+Note: It would be nice to have a `.vscode/keybindings.json` file,
+but this [VSCode issue](https://github.com/Microsoft/vscode/issues/4504) explains why it's not supported,
+and suggests making an extension (which doesn't look so simple to me!).
 
 Think of `ctrl+alt+c ctrl+alt+k` as “kill REPL”.
 
